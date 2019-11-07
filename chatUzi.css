@@ -1,0 +1,159 @@
+body {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 300;
+    background-color: #25292b;
+    margin-top: 0px;
+    margin-bottom:0px;
+}
+
+textarea {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 300;
+    width: 80%;
+    border: 0px;
+    resize: none;
+}
+
+.bigLogo {
+    font-family: 'Russo One', sans-serif;
+    color: white;
+    margin-left: 6px;
+    font-size: 24px;
+}
+
+.userPic {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.userName {
+    color: white;
+    font-weight: bolder;
+    margin-right: 6px;
+}
+
+.topBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: black;
+    height: 48px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.userBar {
+    display: flex;
+    align-items: center;
+}
+
+.posts {
+    height: calc(100vh - 182px);
+    overflow-y: scroll;
+    margin-top: 4px;
+}
+
+.postContainer {
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.postColLeft {
+    height: 42px;
+    margin: 4px 2px 4px 0px;
+}
+
+.postColRight {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 44px);
+}
+
+.postUserInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 12px;
+}
+
+.postText {
+    color: white;
+    font-size: 16px;
+    word-wrap: break-word;
+    flex-wrap: wrap;
+}
+
+.lowerBar {
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.sendButton {
+    background-color: black;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 124px;
+    width: 20%;
+    border: 3px solid black;
+    color: white;
+    font-size: 24px;
+    user-select: none;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 8px;
+    border-radius: 2px;
+    background: rgba(0, 0, 0, .4);
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    padding: 12px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 48px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#snackbar.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 1.5s;
+}
+
+@keyframes fadein {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+    to {
+        top: 48px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        top: 48px;
+        opacity: 1;
+    }
+    to {
+        top: 0;
+        opacity: 0;
+    }
+}
